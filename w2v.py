@@ -7,7 +7,7 @@ from gensim.models import KeyedVectors
 from gensim.models.word2vec import LineSentence
 import time
 
-################################## 写入文件，LineSentence 
+################################## 1、写入文件，LineSentence 
 
 tmp_query_id_dict ={}
 fw = open('all_sentence.txt','w')
@@ -37,7 +37,7 @@ model = Word2Vec(sentences, size=200, min_count=2)
 model.wv.save_word2vec_format('w2v_model_50.txt', binary=False)
 
 
-################################## 多个文件generator，LineSentence 
+################################## 2、多个文件generator，LineSentence 
 TRAIN_PATH = "/home/kesci/input/bytedance/train_final.csv"
 TEST_PATH = "/home/kesci/input/bytedance/test_final_part1.csv"
 CHUNKSIZE = 1000000

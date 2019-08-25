@@ -33,7 +33,7 @@ fw.close()
 
 print('train w2v')
 sentences = LineSentence('all_sentence.txt')
-model = Word2Vec(sentences, size=200, min_count=2)
+model = Word2Vec(sentences, size=200, window=5, min_count=5)
 model.wv.save_word2vec_format('w2v_model_50.txt', binary=False)
 
 
